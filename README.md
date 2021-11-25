@@ -91,32 +91,6 @@ SSH into the control node and follow the steps below:
 
 #### Commands for redeployment
 
-```cd /etc/ansible```
+```sudo curl -O https://(Personal Access Token)@raw.githubusercontent.com/wykesco/Project-1/main/Ansible/Elk.ssh```
+```bash ELK.ssh```
 
-- ```sudo curl -O https://github.com/wykesco/Project-1/tree/main/Ansible/config-web-vm.yml```
-
-- ```sudo curl -O https://github.com/wykesco/Project-1/tree/main/Ansible/ELK-config.yml```
-
-- ```sudo curl -O https://github.com/wykesco/Project-1/tree/main/Ansible/filebeat-config.yml```
-
-- ```sudo curl -O https://github.com/wykesco/Project-1/tree/main/Ansible/filebeat-playbook.yml```
-
-- ```sudo curl -O https://github.com/wykesco/Project-1/tree/main/Ansible/metricbeat-config.yml```
-
-- ```sudo curl -O https://github.com/wykesco/Project-1/tree/main/Ansible/metricbeat-playbook.yml```
-
-```sed -i '/#192.168.1.110/a [elk]\n[elkserver_ip] ansible_python\_interpreter=/usr/bin/python3' hosts.txt```
-
-```sed -i '/#beta.example.org/a [webserver_ip] ansible_python_interpreter=/usr/bin/python3' hosts.txt```
-
-```sed -i 's/10.0.0.4/[elkserver_ip]/g' filebeat-config.yml```
-
-```sed -i 's/10.0.0.4/[elkserver_ip]/g' metricbeat-config.yml```
-
-```ansible-playbook config-web-vm.yml```
-
-```ansible-playbook ELK-config.yml```
-
-```ansible-playbook metricbeat-config.yml```
-
-```ansible-playbook filebeat-config.yml```
