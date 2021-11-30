@@ -87,10 +87,10 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 - Copy the ELK-config file to /etc/ansible/files.
 - Update the hosts file to include the new ip address
-- Run the playbook, and navigate to http://52.147.51.207:5601/app/kibana to check that the installation worked as expected.
+- Run the playbook, and navigate to http://[ELK-SERVER-IP]:5601/app/kibana to check that the installation worked as expected.
 
 #### Commands for redeployment
 
-```sudo curl -O https://(Personal Access Token)@raw.githubusercontent.com/wykesco/Project-1/main/Ansible/Elk.sh```
+```sudo curl -O https://[Personal Access Token]@raw.githubusercontent.com/wykesco/Project-1/main/Ansible/Elk.sh```
 ```bash ELK.sh```
 
