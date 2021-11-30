@@ -58,6 +58,10 @@ then
 read web_ip_4
 fi
 
+if [[ $server_num == [5-99] ]]
+then
+  echo "That's too many!" && exit 1
+fi
 #confirm user didnt make a mistake (human error mitigation haha)
 printf 'ELK Server ip='$elk_ip'\nWebserver ip='$web_ip
 if [[ $server_num == [2-4] ]]
@@ -101,7 +105,8 @@ then
 sed -i '/'$web_ip_3'/a '$web_ip_4' ansible_python_interpreter=/usr/bin/python3' hosts
 fi
 
-ansible-playbook config-web-vm.yml
-ansible-playbook ELK-config.yml
-ansible-playbook metricbeat-config.yml
-ansible-playbook filebeat-config.yml
+#run the playbooks 
+#ansible-playbook config-web-vm.yml
+#ansible-playbook ELK-config.yml
+#ansible-playbook metricbeat-config.yml
+#ansible-playbook filebeat-config.yml
