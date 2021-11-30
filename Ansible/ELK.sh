@@ -1,9 +1,5 @@
 #!/bin/bash
 
-#change directory to /etc/ansible
-cd /etc/ansible
-pwd
-
 #download necessary files
 echo "What's your Personal Access Token?"
 
