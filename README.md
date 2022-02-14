@@ -93,7 +93,7 @@ SSH into the control node and follow the steps below:
 
 ```cd /etc/ansible```
 
-```sudo curl -O https://[Personal Access Token]@raw.githubusercontent.com/wykesco/Project-1/main/Ansible/Elk.sh```
+```sudo curl -O https://[Personal Access Token]@raw.githubusercontent.com/oboughey/Project-1/main/Ansible/Elk.sh```
 
 ```bash ELK.sh```
 
