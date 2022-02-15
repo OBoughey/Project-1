@@ -1,10 +1,5 @@
 #!/bin/bash
 
-#download necessary files
-echo "What's your Personal Access Token?"
-
-read token
-
 sudo curl -O https://$token@raw.githubusercontent.com/wykesco/Project-1/main/Ansible/config-web-vm.yml
 
 sudo curl -O https://$token@raw.githubusercontent.com/wykesco/Project-1/main/Ansible/ELK-config.yml
